@@ -1,0 +1,21 @@
+#!/usr/bin/env node
+
+// Conventionally, the bin/www file in an Express server is the entry file or starting point to start the express server.
+// The intention is for it to be an executable script, meaning the application could be started by simply entering the file name in the terminal as a command: bin/www
+
+const { port } = require('../config');
+
+const app = require('../app');
+const db = require('../db/models');
+
+// Check the database connection before starting the app
+db.sequelize
+    .authenticate()
+    .then(() => {
+        console.log('Database connection success! Sequelize is ready to use...');
+        app.listen(port, () => console.log(`Listening on port ${port}...`));
+    })
+    .catch((err) => {
+        console.log('Database connection failure.');
+        console.error(err);
+    });

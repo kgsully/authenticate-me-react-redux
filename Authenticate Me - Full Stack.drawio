@@ -1,0 +1,1307 @@
+<mxfile host="Electron" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) draw.io/24.7.17 Chrome/128.0.6613.36 Electron/32.0.1 Safari/537.36" version="24.7.17">
+  <diagram name="Page-1" id="1tvuOQJT0n1HeKmIc-OV">
+    <mxGraphModel dx="5638" dy="2898" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Backend Dependencies&lt;/font&gt;&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;bcryptjs &lt;/b&gt;&lt;font face=&quot;Helvetica&quot;&gt;- Password Hashing&lt;/font&gt;&lt;/code&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;cookie-parser&lt;/b&gt;&lt;/code&gt; - parsing cookies from requests&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;cors&lt;/b&gt;&lt;/code&gt; - CORS&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;csurf&lt;/b&gt;&lt;/code&gt; - CSRF protection&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;dotenv&lt;/b&gt;&lt;/code&gt; - load environment variables into Node.js from a &lt;code&gt;.env&lt;/code&gt; file&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;express&lt;/b&gt;&lt;/code&gt; - Express&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;express-async-handler&lt;/b&gt;&lt;/code&gt; - handling &lt;code&gt;async&lt;/code&gt; route handlers&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;express-async-errors&lt;/b&gt;&lt;/code&gt; - handling &lt;code&gt;async&lt;/code&gt; route handlers&lt;/li&gt;&lt;li&gt;&lt;b&gt;express-validator&lt;/b&gt;&amp;nbsp;- used to validate the body of requests for routes&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;helmet&lt;/b&gt;&lt;/code&gt; - security middleware&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;jsonwebtoken&lt;/b&gt;&lt;/code&gt; - JWT&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;morgan&lt;/b&gt;&lt;/code&gt; - logging information about server requests/responses&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;per-env&lt;/b&gt;&lt;/code&gt; - use environment variables for starting app differently&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;pg@&quot;&amp;gt;=8.4.1&quot;&lt;/b&gt;&lt;/code&gt; - PostgresQL greater or equal to version 8.4.1&lt;br&gt;&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;sequelize@6&lt;/b&gt;&lt;/code&gt;&amp;nbsp;- Sequelize&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;sequelize-cli@6&lt;/b&gt;&lt;/code&gt;&amp;nbsp;- use &lt;code&gt;sequelize&lt;/code&gt; in the command line&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="460" y="50" width="410" height="310" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-3" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Backend Dev Dependencies&lt;/font&gt;&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;&lt;code&gt;dotenv-cli&lt;/code&gt; &lt;/b&gt;- use &lt;code&gt;dotenv&lt;/code&gt; in the command line&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;nodemon&lt;/b&gt;&lt;/code&gt; - hot reload server &lt;code&gt;backend&lt;/code&gt; files&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="870" y="50" width="380" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-4" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;Authenticate Me:&lt;/h1&gt;&lt;p&gt;In this multi-part project, you will learn how to put together an entire Express + React application with authentication.&lt;br&gt;&lt;/p&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Backend Phases&lt;/b&gt;&lt;/li&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Phase 0&lt;/b&gt; - Set Up&lt;/li&gt;&lt;li&gt;&lt;b&gt;Phase 1&lt;/b&gt; - API Routes&lt;/li&gt;&lt;li&gt;&lt;b&gt;Phase 2&lt;/b&gt; - Error Handling&lt;/li&gt;&lt;li&gt;&lt;b&gt;Phase 3&lt;/b&gt; - User Authentication&lt;/li&gt;&lt;li&gt;&lt;b&gt;Phase 4&lt;/b&gt; - User Auth Routes&lt;/li&gt;&lt;li&gt;&lt;b&gt;Phase 5&lt;/b&gt; - Validating the Request Body&lt;/li&gt;&lt;/ul&gt;&lt;li&gt;&lt;b&gt;Frontend Phases&lt;/b&gt;&lt;ul&gt;&lt;li&gt;&lt;b&gt;Phase 0&lt;/b&gt;&amp;nbsp;- Set Up&lt;/li&gt;&lt;li&gt;&lt;b&gt;Phase 1&lt;/b&gt;&amp;nbsp;- Login Form Page&lt;/li&gt;&lt;li&gt;&lt;b&gt;Phase 2&lt;/b&gt;&amp;nbsp;- Signup Form Page&lt;/li&gt;&lt;li&gt;&lt;b&gt;Phase 3&lt;/b&gt;&amp;nbsp;- Logout&lt;/li&gt;&lt;li&gt;&lt;b&gt;Bonus&amp;nbsp;&lt;/b&gt;-&amp;nbsp; Make Login Form Page into a Modal&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;br&gt;&lt;li&gt;&lt;b&gt;Deployment to Heroku&lt;/b&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="40" y="10" width="380" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-41" value="/backend" style="swimlane;whiteSpace=wrap;html=1;startSize=23;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="40" y="390" width="1730" height="1580" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-20" value=".env" style="swimlane;whiteSpace=wrap;html=1;startSize=23;fillColor=#bac8d3;strokeColor=#23445d;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="190" y="40" width="240" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-35" value="&lt;font style=&quot;font-size: 10px;&quot;&gt;NOTE: Use openssl to create random string for jwt secret:&amp;nbsp; &amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;span style=&quot;font-size: 10px; background-color: initial;&quot;&gt;openssl rand -base64 10&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="GpSlVhP3Auss_XkfHNzA-20" vertex="1">
+          <mxGeometry x="5" y="120" width="230" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-21" value="&lt;div&gt;PORT=5000&lt;/div&gt;&lt;div&gt;DB_USERNAME=auth_app&lt;/div&gt;&lt;div&gt;DB_PASSWORD=password&lt;/div&gt;&lt;div&gt;DB_DATABASE=auth_db&lt;/div&gt;&lt;div&gt;DB_HOST=localhost&lt;/div&gt;&lt;div&gt;JWT_SECRET=&amp;lt;STRONG SECRET&amp;gt;&lt;/div&gt;&lt;div&gt;JWT_EXPIRES_IN=604800&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;" parent="GpSlVhP3Auss_XkfHNzA-20" vertex="1">
+          <mxGeometry x="5" y="20" width="230" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-40" value="/config" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="35" y="250" width="590" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-75" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-40" source="GpSlVhP3Auss_XkfHNzA-36" target="GpSlVhP3Auss_XkfHNzA-52" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-36" value="index.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="GpSlVhP3Auss_XkfHNzA-40" vertex="1">
+          <mxGeometry x="20" y="40" width="230" height="230" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-38" value="Defines exported object:&lt;div&gt;Each environment variable will be read and exported as a key from this file&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="GpSlVhP3Auss_XkfHNzA-36" vertex="1">
+          <mxGeometry x="10" y="30" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="3QvN6JOpcheGgyn5Rt7g-3" value="&lt;div style=&quot;font-size: 8px;&quot;&gt;&lt;span style=&quot;background-color: initial; font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;&lt;b&gt;Keys (additional db keys due to postgres vs sqlite):&lt;/b&gt;&lt;/font&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 8px;&quot;&gt;&lt;ul style=&quot;font-size: 8px;&quot;&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;environment&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;port&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;db (object)&lt;/font&gt;&lt;/li&gt;&lt;ul style=&quot;font-size: 8px;&quot;&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;username&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;password&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;database&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;host&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;jwtConfig (object)&lt;/font&gt;&lt;/li&gt;&lt;ul style=&quot;font-size: 8px;&quot;&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;secret&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;font-size: 8px;&quot;&gt;&lt;font style=&quot;font-size: 8px;&quot;&gt;expiresIn&lt;br style=&quot;font-size: 8px;&quot;&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/ul&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=bottom;whiteSpace=wrap;rounded=0;fontSize=8;" parent="GpSlVhP3Auss_XkfHNzA-36" vertex="1">
+          <mxGeometry x="10" y="95" width="210" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-52" value="database.js" style="swimlane;whiteSpace=wrap;html=1;align=center;startSize=23;fillColor=#d5e8d4;strokeColor=#82b366;" parent="GpSlVhP3Auss_XkfHNzA-40" vertex="1">
+          <mxGeometry x="320" y="40" width="230" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-53" value="Defines exported objects:&lt;div&gt;DB configurations for development and production.&amp;nbsp;&lt;/div&gt;&lt;div&gt;- This will allow loading of the database configuration enviornment variables from the .env file into the config/index.js&lt;/div&gt;&lt;div&gt;- Defaults included in generation file must be replaced.&lt;/div&gt;&lt;div&gt;Refer to training sections on initializing sequelize for further info on object keys/values.&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="GpSlVhP3Auss_XkfHNzA-52" vertex="1">
+          <mxGeometry x="10" y="30" width="210" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-54" value="Keys:&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;development (object)&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;production (object)&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="GpSlVhP3Auss_XkfHNzA-52" vertex="1">
+          <mxGeometry x="10" y="210" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-76" value="imported via &#39;require&#39;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="GpSlVhP3Auss_XkfHNzA-40" vertex="1">
+          <mxGeometry x="250" y="180" width="50" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-46" value="/db" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="740" y="40" width="790" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="TN3s48xv0ag6netvd0yR-34" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-46" source="GpSlVhP3Auss_XkfHNzA-77" target="GpSlVhP3Auss_XkfHNzA-80" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-77" value="/migrations" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="GpSlVhP3Auss_XkfHNzA-46" vertex="1">
+          <mxGeometry x="10" y="80" width="250" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-27" value="user.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="GpSlVhP3Auss_XkfHNzA-77" vertex="1">
+          <mxGeometry x="20" y="40" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-29" value="Defines database table schema / &lt;b&gt;SQL level&lt;/b&gt; constraints for table Users (see &#39;Database Table Schema(s) and Models for more info)." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="xRNBOfDQ-NbFJoLuyLIO-27" vertex="1">
+          <mxGeometry x="11.5" y="30" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TN3s48xv0ag6netvd0yR-37" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-46" source="GpSlVhP3Auss_XkfHNzA-78" target="GpSlVhP3Auss_XkfHNzA-80" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-78" value="/models" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="GpSlVhP3Auss_XkfHNzA-46" vertex="1">
+          <mxGeometry x="270" y="80" width="250" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-28" value="XXXXXXX-create-user.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="GpSlVhP3Auss_XkfHNzA-78" vertex="1">
+          <mxGeometry x="20" y="40" width="210" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-39" value="Defines database table Sequelize &lt;b style=&quot;font-size: 11px;&quot;&gt;Model level&lt;/b&gt;&amp;nbsp;validations, scopes, and methods&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;(toSafeObject,&amp;nbsp; getCurrentUserById, login, signup)&lt;/span&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" parent="xRNBOfDQ-NbFJoLuyLIO-28" vertex="1">
+          <mxGeometry x="10" y="25" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="TN3s48xv0ag6netvd0yR-36" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-46" source="GpSlVhP3Auss_XkfHNzA-79" target="GpSlVhP3Auss_XkfHNzA-80" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-79" value="/seeders" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="GpSlVhP3Auss_XkfHNzA-46" vertex="1">
+          <mxGeometry x="530" y="80" width="250" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-44" value="XXXXX-demo-user.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="GpSlVhP3Auss_XkfHNzA-79" vertex="1">
+          <mxGeometry x="20" y="40" width="210" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-45" value="Defines test data used to seed the database, as well as contains a method to remove seed data." style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="xRNBOfDQ-NbFJoLuyLIO-44" vertex="1">
+          <mxGeometry x="10" y="25" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-80" value="auth_db (PostgreSQL)" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" parent="GpSlVhP3Auss_XkfHNzA-46" vertex="1">
+          <mxGeometry x="280" y="330" width="230" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-81" value="Defines exported object:&lt;div&gt;Each environment variable will be read and exported as a key from this file&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="GpSlVhP3Auss_XkfHNzA-80" vertex="1">
+          <mxGeometry x="10" y="30" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-35" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=0;entryDx=0;entryDy=0;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-46" source="xRNBOfDQ-NbFJoLuyLIO-31" target="xRNBOfDQ-NbFJoLuyLIO-27" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-36" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-46" source="xRNBOfDQ-NbFJoLuyLIO-31" target="xRNBOfDQ-NbFJoLuyLIO-28" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-31" value="npx sequelize model:generate --name User --attributes username:string,email:string,hashedPassword:string&amp;nbsp;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;strokeColor=default;" parent="GpSlVhP3Auss_XkfHNzA-46" vertex="1">
+          <mxGeometry x="130" y="30" width="260" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-38" value="dotenv npx sequelize&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;db:migrate&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="GpSlVhP3Auss_XkfHNzA-46" vertex="1">
+          <mxGeometry x="50" y="310" width="180" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-40" value="dotenv npx sequelize&lt;br&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;db:seed:all&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="GpSlVhP3Auss_XkfHNzA-46" vertex="1">
+          <mxGeometry x="660" y="290" width="100" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-46" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-46" source="xRNBOfDQ-NbFJoLuyLIO-43" target="xRNBOfDQ-NbFJoLuyLIO-44" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-43" value="&lt;span style=&quot;font-size: 12px; text-align: left;&quot;&gt;npx sequelize seed:generate --name demo-user&lt;/span&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;strokeColor=default;" parent="GpSlVhP3Auss_XkfHNzA-46" vertex="1">
+          <mxGeometry x="575" y="30" width="160" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-47" value=".sequelizerc" style="swimlane;whiteSpace=wrap;html=1;fillColor=#bac8d3;strokeColor=#23445d;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="440" y="40" width="290" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-51" value="Defines paths used by sequelize using the native node.js &#39;path&#39; module.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Set up sequelize to look in the backend/config/database.js file for database configurations. Also set up the backend/db folder to contain all the files for models, seeders, and migrations&lt;/div&gt;&lt;div&gt;Running the sequelize initialization will generate folders and files as defined by .sequelizerc&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="GpSlVhP3Auss_XkfHNzA-47" vertex="1">
+          <mxGeometry x="10" y="20" width="260" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-63" value="npx sequelize init" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="570" y="220" width="110" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-74" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#ffe6cc;strokeColor=#d79b00;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="GpSlVhP3Auss_XkfHNzA-51" target="GpSlVhP3Auss_XkfHNzA-52" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="580" y="240" />
+              <mxPoint x="470" y="240" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-83" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#ffe6cc;strokeColor=#d79b00;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="GpSlVhP3Auss_XkfHNzA-52" target="GpSlVhP3Auss_XkfHNzA-80" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="620" y="425" />
+              <mxPoint x="620" y="435" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-85" value="process.env" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="300" y="210" width="85" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-86" value="app.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="35" y="620" width="590" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-87" value="Main application code&lt;div style=&quot;font-size: 11px;&quot;&gt;- Initializes the express application&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;- Determines operating environment (dev vs prod)&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;- Requires and connects middleware (including security middleware)&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;white-space: pre; font-size: 11px;&quot;&gt;&#x9;&lt;/span&gt;&lt;u style=&quot;font-size: 11px;&quot;&gt;Security Middleware:&lt;/u&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;white-space: pre; font-size: 11px;&quot;&gt;&#x9;&lt;/span&gt;- Enables CORS in development (not used in prod because&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;white-space: pre; font-size: 11px;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; react frontend will be served from a different server than&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;white-space: pre; font-size: 11px;&quot;&gt;&#x9;&lt;/span&gt;&amp;nbsp; the express server&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;white-space: pre; font-size: 11px;&quot;&gt;&#x9;&lt;/span&gt;- Uses helmet to set a variety of HTTP headers&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;&lt;span style=&quot;white-space: pre; font-size: 11px;&quot;&gt;&#x9;&lt;/span&gt;- Enables the CSURF middleware to prevent CSRF attacks&lt;br style=&quot;font-size: 11px;&quot;&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;- Connects all routes to be used by the express application&lt;/div&gt;&lt;div style=&quot;font-size: 11px;&quot;&gt;- Error handlers / Error handling middleware&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=11;" parent="GpSlVhP3Auss_XkfHNzA-86" vertex="1">
+          <mxGeometry x="10" y="30" width="370" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh5eemPmoigoI3z--_Fc-7" value="Error Handling Middleware" style="swimlane;whiteSpace=wrap;html=1;align=center;" parent="GpSlVhP3Auss_XkfHNzA-86" vertex="1">
+          <mxGeometry x="390" y="40" width="180" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh5eemPmoigoI3z--_Fc-8" value="- Resource Not Found (404)&lt;div&gt;- Sequelize Validation&lt;/div&gt;&lt;div&gt;- Error Formatter&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="Vh5eemPmoigoI3z--_Fc-7" vertex="1">
+          <mxGeometry x="2.5" y="30" width="155" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="3QvN6JOpcheGgyn5Rt7g-6" value="&lt;div style=&quot;font-size: 9px; text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;&lt;u style=&quot;font-size: 9px;&quot;&gt;Notes on CSRF middleware:&lt;/u&gt;&lt;/font&gt;&lt;/div&gt;&lt;div style=&quot;font-size: 9px; text-align: left;&quot;&gt;&lt;font style=&quot;font-size: 9px;&quot;&gt;Adds a _csrf cookie that is HTTP-only to any server response. Also adds&lt;/font&gt;&lt;span style=&quot;font-size: 9px; background-color: initial;&quot;&gt;&amp;nbsp;a method on all requests - req.csrfToken - that will be set to another&lt;/span&gt;&lt;span style=&quot;font-size: 9px; background-color: initial;&quot;&gt;&amp;nbsp;cookie (XSRF-TOKEN) later on. The XSRF-TOKEN cookie value needs to be sent in the header of any request with all HTTP verbs besides GET. This header will be used to validate the _csrf cookie to confirm that the request comes from your site and not an unauthorized site&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="GpSlVhP3Auss_XkfHNzA-86" vertex="1">
+          <mxGeometry x="10" y="200" width="570" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-89" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="GpSlVhP3Auss_XkfHNzA-36" target="GpSlVhP3Auss_XkfHNzA-86" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="170" y="550" />
+              <mxPoint x="330" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-90" value="require(&#39;./config&#39;)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="340" y="590" width="80" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-99" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="GpSlVhP3Auss_XkfHNzA-98" target="GpSlVhP3Auss_XkfHNzA-86" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-98" value="/routes" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="680" y="600" width="350" height="940" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-101" value="index.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="GpSlVhP3Auss_XkfHNzA-98" vertex="1">
+          <mxGeometry x="35" y="40" width="280" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-102" value="Routes index&lt;div style=&quot;font-size: 10px;&quot;&gt;- Contains temporary test route &#39;/hello/world&#39;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;- Contains route GET /api/csrf/restore&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; (allows any dev to re-set the CSRF token&lt;br style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; &amp;nbsp;cookie XSRF-TOKEN.)&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;- Collects all sub-routes from various folders&lt;br style=&quot;font-size: 10px;&quot;&gt;&amp;nbsp; as the routes &#39;index&#39;&lt;/div&gt;&lt;div style=&quot;font-size: 10px;&quot;&gt;- Provides static routes for Production and development. In Prod, sets static routes to serve React Build files and attach the XSRF-TOKEN cookie to index.html. In Dev, provides the /api/csrf/restore route to set the XSRF-TOKEN cookie to the response for use in the frontend&amp;nbsp;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;fontSize=10;" parent="GpSlVhP3Auss_XkfHNzA-101" vertex="1">
+          <mxGeometry x="10" y="30" width="260" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh5eemPmoigoI3z--_Fc-1" value="/api" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="GpSlVhP3Auss_XkfHNzA-98" vertex="1">
+          <mxGeometry x="10" y="280" width="310" height="640" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh5eemPmoigoI3z--_Fc-2" value="index.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="Vh5eemPmoigoI3z--_Fc-1" vertex="1">
+          <mxGeometry x="10" y="30" width="280" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh5eemPmoigoI3z--_Fc-3" value="Routes index&lt;div&gt;- Contains test endpoint POST /api/test&lt;br&gt;&amp;nbsp; which will send back the request body in&lt;br&gt;&amp;nbsp; JSON format&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="Vh5eemPmoigoI3z--_Fc-2" vertex="1">
+          <mxGeometry x="10" y="30" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-294" value="session.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="Vh5eemPmoigoI3z--_Fc-1" vertex="1">
+          <mxGeometry x="10" y="140" width="280" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-295" value="Contains routes for login, logout, and get session user:&lt;div&gt;&lt;div&gt;&lt;u&gt;Login:&lt;/u&gt; POST /api/session (uses validateLogin)&lt;/div&gt;&lt;div&gt;&lt;u&gt;Logout:&lt;/u&gt; DELETE /api/session&lt;/div&gt;&lt;div&gt;&lt;u&gt;Get session user:&lt;/u&gt; GET /api/session&lt;/div&gt;&lt;/div&gt;&lt;div&gt;- Uses setTokenCookie and restoreUser&lt;br&gt;&amp;nbsp; middlewares&lt;/div&gt;&lt;div&gt;- Uses User model static and instance&lt;br&gt;&amp;nbsp; &amp;nbsp;methods&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="xRNBOfDQ-NbFJoLuyLIO-294" vertex="1">
+          <mxGeometry x="10" y="30" width="250" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-20" value="validateLogin" style="swimlane;whiteSpace=wrap;html=1;align=center;startSize=23;" parent="xRNBOfDQ-NbFJoLuyLIO-294" vertex="1">
+          <mxGeometry x="10" y="175" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-21" value="Uses express-validator function &#39;check&#39; to validate request body contains a &#39;credential&#39; of either username or email address and a key of &#39;password&#39;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="9ZuvyQgDSHmF_pNNcBE1-20" vertex="1">
+          <mxGeometry x="6.25" y="20" width="247.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-296" value="users.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="Vh5eemPmoigoI3z--_Fc-1" vertex="1">
+          <mxGeometry x="10" y="430" width="280" height="200" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-297" value="Contains route for user creation&lt;div&gt;&lt;u&gt;Signup:&lt;/u&gt;&amp;nbsp;POST /api/users&lt;/div&gt;&lt;div&gt;- Responsible for creating DB record for new&lt;br&gt;&amp;nbsp; user&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="xRNBOfDQ-NbFJoLuyLIO-296" vertex="1">
+          <mxGeometry x="10" y="30" width="250" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-22" value="validateSignup" style="swimlane;whiteSpace=wrap;html=1;align=center;startSize=23;" parent="xRNBOfDQ-NbFJoLuyLIO-296" vertex="1">
+          <mxGeometry x="10" y="100" width="260" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-23" value="Uses express-validator function &#39;check&#39; to validate request body contains valid keys for username, email, and password" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="9ZuvyQgDSHmF_pNNcBE1-22" vertex="1">
+          <mxGeometry x="6.25" y="20" width="247.5" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh5eemPmoigoI3z--_Fc-6" value="&lt;div&gt;const apiRouter = require(&#39;./api&#39;);&lt;/div&gt;&lt;div&gt;router.use(&#39;/api&#39;, apiRouter);&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="GpSlVhP3Auss_XkfHNzA-98" vertex="1">
+          <mxGeometry x="20" y="240" width="150" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-183" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;" parent="GpSlVhP3Auss_XkfHNzA-98" source="Vh5eemPmoigoI3z--_Fc-2" target="GpSlVhP3Auss_XkfHNzA-101" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="230" y="250" />
+              <mxPoint x="175" y="250" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-100" value="require(&#39;./routes&#39;)&lt;div style=&quot;font-size: 9px;&quot;&gt;app.use(routes);&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="570" y="910" width="90" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-105" value="/bin" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="35" y="910" width="460" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-106" value="www" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="GpSlVhP3Auss_XkfHNzA-105" vertex="1">
+          <mxGeometry x="20" y="40" width="420" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-107" value="Conventionally, the bin/www file in an Express server is the entry file or starting point to start the express server.&lt;div&gt;The intention is for it to be an executable script, meaning the application could be started by simply entering the file name in the terminal as a command: bin/www&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="GpSlVhP3Auss_XkfHNzA-106" vertex="1">
+          <mxGeometry x="10" y="30" width="190" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-108" value="Initialization script requring:&lt;div&gt;- dotenv config&lt;/div&gt;&lt;div&gt;- app&lt;/div&gt;&lt;div&gt;- db (/db/models)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="GpSlVhP3Auss_XkfHNzA-106" vertex="1">
+          <mxGeometry x="215" y="30" width="190" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-109" value="&lt;div style=&quot;text-align: left;&quot;&gt;Checks the DB connection before starting the app&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;div style=&quot;text-align: left;&quot;&gt;Catches DB connection failure and alerts the user through console.error&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="GpSlVhP3Auss_XkfHNzA-106" vertex="1">
+          <mxGeometry x="215" y="100" width="210" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-112" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="GpSlVhP3Auss_XkfHNzA-106" target="GpSlVhP3Auss_XkfHNzA-86" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="265" y="940" />
+              <mxPoint x="330" y="940" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-113" value="package.json" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="10" y="40" width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-114" value="Defines dependencies / installations used by npm.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Includes scripts for starting on a per-environment basis:&lt;/div&gt;&lt;div&gt;- start (per-env)&lt;/div&gt;&lt;div&gt;- start:development&lt;/div&gt;&lt;div&gt;- start:production&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" parent="GpSlVhP3Auss_XkfHNzA-113" vertex="1">
+          <mxGeometry x="7.5" y="30" width="155" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-116" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fillColor=#ffe6cc;strokeColor=#d79b00;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="GpSlVhP3Auss_XkfHNzA-106" target="GpSlVhP3Auss_XkfHNzA-113" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="20" y="1045" />
+              <mxPoint x="20" y="230" />
+              <mxPoint x="95" y="230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-117" value="npm start&lt;div&gt;npm start:development&lt;/div&gt;&lt;div&gt;npm start:production&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="100" y="200" width="110" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="GpSlVhP3Auss_XkfHNzA-84" value="dotenv npx sequelize&lt;div&gt;&amp;nbsp;db:migrate&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="635" y="400" width="105" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="Vh5eemPmoigoI3z--_Fc-11" value="bin/www executes app.js" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="335" y="880" width="120" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-41" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fillColor=#e1d5e7;strokeColor=#9673a6;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="GpSlVhP3Auss_XkfHNzA-20" target="GpSlVhP3Auss_XkfHNzA-36" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="310" y="240" />
+              <mxPoint x="228" y="240" />
+              <mxPoint x="228" y="290" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-184" value="/utils" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="1080" y="600" width="640" height="700" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-185" value="auth.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="xRNBOfDQ-NbFJoLuyLIO-184" vertex="1">
+          <mxGeometry x="20" y="40" width="600" height="450" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-186" value="Contains middleware functions that aid in authentication" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="xRNBOfDQ-NbFJoLuyLIO-185" vertex="1">
+          <mxGeometry x="10" y="30" width="320" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-196" value="setTokenCookie" style="swimlane;whiteSpace=wrap;html=1;align=center;" parent="xRNBOfDQ-NbFJoLuyLIO-185" vertex="1">
+          <mxGeometry x="10" y="70" width="315" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-197" value="Takes in response and session user and generates a JWT using the imported secret. Set to expire based on .env config. Payload is the value returned by the.toSafeObject method from the user model. After the JWT is created, it&#39;s set to an HTTP-only cookie on the response as a token cookie.&lt;div&gt;&lt;b&gt;--&amp;gt; Used in the login and sign-up routes&lt;/b&gt;&lt;br&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="xRNBOfDQ-NbFJoLuyLIO-196" vertex="1">
+          <mxGeometry x="3.75" y="20" width="307.5" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-292" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=0;" parent="xRNBOfDQ-NbFJoLuyLIO-185" source="xRNBOfDQ-NbFJoLuyLIO-204" target="xRNBOfDQ-NbFJoLuyLIO-206" edge="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-204" value="restoreUser" style="swimlane;whiteSpace=wrap;html=1;align=center;" parent="xRNBOfDQ-NbFJoLuyLIO-185" vertex="1">
+          <mxGeometry x="10" y="220" width="315" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-205" value="&lt;div&gt;&lt;div&gt;Restores the session user based upon the contents of the JWT cookie. Verifies and parses the JWT payload and searches the DB for a User iwth the ID in the payload (uses currentUser scope, hashedPassword is not required). If a User is found, save the user to a key of user onto the request. If there is an error verifying the JWT or a User isn&#39;t found, clear the token cookie from the response.&lt;/div&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;--&amp;gt; Used as a pre-middleware for route handlers and for requireAuth authentication middleware&lt;/b&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="xRNBOfDQ-NbFJoLuyLIO-204" vertex="1">
+          <mxGeometry x="3.75" y="20" width="307.5" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-206" value="requireAuth" style="swimlane;whiteSpace=wrap;html=1;align=center;" parent="xRNBOfDQ-NbFJoLuyLIO-185" vertex="1">
+          <mxGeometry x="350" y="70" width="240" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-207" value="&lt;div&gt;&lt;div&gt;Requires a session user to be authenticated before accessing a route.&lt;/div&gt;&lt;/div&gt;&lt;div&gt;- Defined as an array with the restoreUser middleware function as the first element in the array.&lt;/div&gt;&lt;div&gt;- Ensures that if a valid JWT cookie exists, the session user will be loaded into the req.user attribute.&lt;/div&gt;&lt;div&gt;- The second middleware (in the array)will check req.user and go to the next middleware if there is a session user present. If there is no session user, an error will be created and passed along to the error-handling middlewares.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;[ restoreUser, function(generate error) ]&lt;/div&gt;&lt;div&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;--&amp;gt;&amp;nbsp;&lt;/b&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;b&gt;Both restoreUser and requireAuth will be applied as a pre-middleware to route handlers where needed.&lt;/b&gt;&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="xRNBOfDQ-NbFJoLuyLIO-206" vertex="1">
+          <mxGeometry x="3.75" y="20" width="226.25" height="300" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-293" value="Direct reference within auth.js" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" parent="xRNBOfDQ-NbFJoLuyLIO-185" vertex="1">
+          <mxGeometry x="180" y="420" width="140" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-8" value="require(&#39;../../utils/auth&#39;);" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;rotation=0;" parent="xRNBOfDQ-NbFJoLuyLIO-184" vertex="1">
+          <mxGeometry x="260" y="680" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-11" value="validation.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="xRNBOfDQ-NbFJoLuyLIO-184" vertex="1">
+          <mxGeometry x="20" y="500" width="510" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-12" value="Validates the body of the requests for routes that expect a request body&lt;div&gt;- Uses express-validator package&lt;/div&gt;&lt;div&gt;- uses the &#39;check&#39; and &#39;validationResult&#39; functions&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="9ZuvyQgDSHmF_pNNcBE1-11" vertex="1">
+          <mxGeometry x="10" y="30" width="200" height="110" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-16" value="handleValidationErrors" style="swimlane;whiteSpace=wrap;html=1;align=center;startSize=23;" parent="9ZuvyQgDSHmF_pNNcBE1-11" vertex="1">
+          <mxGeometry x="230" y="30" width="260" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-17" value="&lt;div&gt;Calls validationResult from the express-validator package passing in the request. If no validation errors from validationResult, invoke the next middleware. If errors exist, create an error with validation error messages and invoke next error-handling middleware&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" parent="9ZuvyQgDSHmF_pNNcBE1-16" vertex="1">
+          <mxGeometry x="6.25" y="20" width="247.5" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-198" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.75;exitDx=0;exitDy=0;entryX=0.216;entryY=-0.001;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="GpSlVhP3Auss_XkfHNzA-40" target="xRNBOfDQ-NbFJoLuyLIO-185" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="680" y="497" />
+              <mxPoint x="680" y="540" />
+              <mxPoint x="1230" y="540" />
+              <mxPoint x="1230" y="640" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-199" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="GpSlVhP3Auss_XkfHNzA-78" target="xRNBOfDQ-NbFJoLuyLIO-185" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1197" y="360" />
+              <mxPoint x="1380" y="360" />
+              <mxPoint x="1380" y="550" />
+              <mxPoint x="1550" y="550" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-200" value="require(&#39;../config&#39;)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="1130" y="560" width="90" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-201" value="require(&#39;../db/models&#39;)" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="1440" y="560" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-298" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="xRNBOfDQ-NbFJoLuyLIO-205" target="xRNBOfDQ-NbFJoLuyLIO-294" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1060" y="955" />
+              <mxPoint x="1060" y="1160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-299" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="xRNBOfDQ-NbFJoLuyLIO-196" target="xRNBOfDQ-NbFJoLuyLIO-294" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1060" y="780" />
+              <mxPoint x="1060" y="1160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-300" value="require(&#39;../../utils/auth&#39;);" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;rotation=-90;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="1020" y="880" width="100" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-314" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.25;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="xRNBOfDQ-NbFJoLuyLIO-28" target="xRNBOfDQ-NbFJoLuyLIO-294" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1083" y="330" />
+              <mxPoint x="980" y="330" />
+              <mxPoint x="980" y="570" />
+              <mxPoint x="1050" y="570" />
+              <mxPoint x="1050" y="1090" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-315" value="require(&#39;../../db/models&#39;);" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;rotation=-90;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="990" y="890" width="100" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-9" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="xRNBOfDQ-NbFJoLuyLIO-28" target="xRNBOfDQ-NbFJoLuyLIO-296" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1083" y="330" />
+              <mxPoint x="980" y="330" />
+              <mxPoint x="980" y="570" />
+              <mxPoint x="1050" y="570" />
+              <mxPoint x="1050" y="1410" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-18" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="9ZuvyQgDSHmF_pNNcBE1-11" target="xRNBOfDQ-NbFJoLuyLIO-294" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1020" y="1180" />
+              <mxPoint x="1020" y="1230" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-19" value="require(&#39;../../utils/validation&#39;);" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;rotation=-90;" parent="GpSlVhP3Auss_XkfHNzA-41" vertex="1">
+          <mxGeometry x="1020" y="1110" width="100" height="10" as="geometry" />
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-6" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="xRNBOfDQ-NbFJoLuyLIO-206" target="xRNBOfDQ-NbFJoLuyLIO-296" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="990" y="1240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1630" y="1280" />
+              <mxPoint x="1060" y="1280" />
+              <mxPoint x="1060" y="1460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9ZuvyQgDSHmF_pNNcBE1-10" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" parent="GpSlVhP3Auss_XkfHNzA-41" source="xRNBOfDQ-NbFJoLuyLIO-196" target="xRNBOfDQ-NbFJoLuyLIO-296" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="990" y="1240" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="1440" y="780" />
+              <mxPoint x="1440" y="1080" />
+              <mxPoint x="1630" y="1080" />
+              <mxPoint x="1630" y="1280" />
+              <mxPoint x="1060" y="1280" />
+              <mxPoint x="1060" y="1460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-196" value="" style="endArrow=doubleBlock;startArrow=doubleBlock;html=1;rounded=1;dashed=1;fillColor=#a20025;strokeColor=#6F0000;curved=0;startFill=1;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="GpSlVhP3Auss_XkfHNzA-41" target="GpSlVhP3Auss_XkfHNzA-101">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="610" y="1100" as="sourcePoint" />
+            <mxPoint x="610" y="1030" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="670" y="1100" />
+              <mxPoint x="670" y="735" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-215" value="" style="endArrow=doubleBlock;startArrow=doubleBlock;html=1;rounded=1;dashed=1;fillColor=#a20025;strokeColor=#6F0000;curved=0;startFill=1;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="GpSlVhP3Auss_XkfHNzA-41" target="xRNBOfDQ-NbFJoLuyLIO-294">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="610" y="1410" as="sourcePoint" />
+            <mxPoint x="455" y="1020" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="670" y="1410" />
+              <mxPoint x="670" y="1160" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-217" value="/frontend/src/store/session.js" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="GpSlVhP3Auss_XkfHNzA-41">
+          <mxGeometry x="490" y="1400" width="120" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-218" value="/frontend/src/store/csrf.js" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=9;" vertex="1" parent="GpSlVhP3Auss_XkfHNzA-41">
+          <mxGeometry x="510" y="1090" width="100" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="TN3s48xv0ag6netvd0yR-3" value="config file" style="swimlane;whiteSpace=wrap;html=1;startSize=23;fillColor=#bac8d3;strokeColor=#23445d;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="105" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TN3s48xv0ag6netvd0yR-21" value="directory / folder" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="155" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TN3s48xv0ag6netvd0yR-22" value="javascript file" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="205" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TN3s48xv0ag6netvd0yR-25" value="script" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#f8cecc;strokeColor=#b85450;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="255" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TN3s48xv0ag6netvd0yR-29" value="npm config file" style="swimlane;whiteSpace=wrap;html=1;startSize=23;fillColor=#e1d5e7;strokeColor=#9673a6;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="50" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TN3s48xv0ag6netvd0yR-30" value="database" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#fff2cc;strokeColor=#d6b656;" parent="1" vertex="1">
+          <mxGeometry x="2000" y="50" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="TN3s48xv0ag6netvd0yR-32" value="middleware" style="swimlane;whiteSpace=wrap;html=1;align=center;" parent="1" vertex="1">
+          <mxGeometry x="2000" y="105" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-195" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#fff2cc;strokeColor=#d6b656;strokeWidth=1;shape=link;" parent="1" source="xRNBOfDQ-NbFJoLuyLIO-37" target="GpSlVhP3Auss_XkfHNzA-80" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1620" y="540" />
+              <mxPoint x="1620" y="825" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-37" value="Users" style="swimlane;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="390" width="740" height="600" as="geometry">
+            <mxRectangle x="1770" y="330" width="70" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-1" value="Schema" style="shape=table;startSize=17;container=1;collapsible=0;childLayout=tableLayout;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="xRNBOfDQ-NbFJoLuyLIO-37" vertex="1">
+          <mxGeometry x="20" y="43.5" width="310" height="196.5" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-114" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-1" vertex="1">
+          <mxGeometry y="17" width="310" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-115" value="Column Name" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-114" vertex="1">
+          <mxGeometry width="83" height="19" as="geometry">
+            <mxRectangle width="83" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-116" value="Data Type" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-114" vertex="1">
+          <mxGeometry x="83" width="67" height="19" as="geometry">
+            <mxRectangle width="67" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-117" value="Constraints" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-114" vertex="1">
+          <mxGeometry x="150" width="160" height="19" as="geometry">
+            <mxRectangle width="160" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-2" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-1" vertex="1">
+          <mxGeometry y="36" width="310" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-3" value="id" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-2" vertex="1">
+          <mxGeometry width="83" height="23" as="geometry">
+            <mxRectangle width="83" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-4" value="integer" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-2" vertex="1">
+          <mxGeometry x="83" width="67" height="23" as="geometry">
+            <mxRectangle width="67" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-5" value="not null, primary key" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-2" vertex="1">
+          <mxGeometry x="150" width="160" height="23" as="geometry">
+            <mxRectangle width="160" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-6" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-1" vertex="1">
+          <mxGeometry y="59" width="310" height="36" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-7" value="username" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-6" vertex="1">
+          <mxGeometry width="83" height="36" as="geometry">
+            <mxRectangle width="83" height="36" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-8" value="string" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-6" vertex="1">
+          <mxGeometry x="83" width="67" height="36" as="geometry">
+            <mxRectangle width="67" height="36" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-9" value="not null, indexed, unique, max 30 characters" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-6" vertex="1">
+          <mxGeometry x="150" width="160" height="36" as="geometry">
+            <mxRectangle width="160" height="36" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-10" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-1" vertex="1">
+          <mxGeometry y="95" width="310" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-11" value="email" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-10" vertex="1">
+          <mxGeometry width="83" height="33" as="geometry">
+            <mxRectangle width="83" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-12" value="string" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-10" vertex="1">
+          <mxGeometry x="83" width="67" height="33" as="geometry">
+            <mxRectangle width="67" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-13" value="not null, indexed, unique, max 256 characters" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-10" vertex="1">
+          <mxGeometry x="150" width="160" height="33" as="geometry">
+            <mxRectangle width="160" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-14" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-1" vertex="1">
+          <mxGeometry y="128" width="310" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-15" value="hashedPassword" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-14" vertex="1">
+          <mxGeometry width="83" height="22" as="geometry">
+            <mxRectangle width="83" height="22" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-16" value="binary string" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-14" vertex="1">
+          <mxGeometry x="83" width="67" height="22" as="geometry">
+            <mxRectangle width="67" height="22" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-17" value="not null" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-14" vertex="1">
+          <mxGeometry x="150" width="160" height="22" as="geometry">
+            <mxRectangle width="160" height="22" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-18" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-1" vertex="1">
+          <mxGeometry y="150" width="310" height="25" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-19" value="createdAt" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-18" vertex="1">
+          <mxGeometry width="83" height="25" as="geometry">
+            <mxRectangle width="83" height="25" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-20" value="datetime" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-18" vertex="1">
+          <mxGeometry x="83" width="67" height="25" as="geometry">
+            <mxRectangle width="67" height="25" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-21" value="not null, default value of now()" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-18" vertex="1">
+          <mxGeometry x="150" width="160" height="25" as="geometry">
+            <mxRectangle width="160" height="25" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-22" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-1" vertex="1">
+          <mxGeometry y="175" width="310" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-23" value="updatedAt" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-22" vertex="1">
+          <mxGeometry width="83" height="22" as="geometry">
+            <mxRectangle width="83" height="22" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-24" value="datetime" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-22" vertex="1">
+          <mxGeometry x="83" width="67" height="22" as="geometry">
+            <mxRectangle width="67" height="22" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-25" value="not null, default value of now()" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-22" vertex="1">
+          <mxGeometry x="150" width="160" height="22" as="geometry">
+            <mxRectangle width="160" height="22" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-72" value="Model - Validations" style="shape=table;startSize=17;container=1;collapsible=0;childLayout=tableLayout;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="xRNBOfDQ-NbFJoLuyLIO-37" vertex="1">
+          <mxGeometry x="340" y="43.5" width="380" height="122" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-118" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-72" vertex="1">
+          <mxGeometry y="17" width="380" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-119" value="Column Name" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-118" vertex="1">
+          <mxGeometry width="82" height="20" as="geometry">
+            <mxRectangle width="82" height="20" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-120" value="Data Type" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-118" vertex="1">
+          <mxGeometry x="82" width="62" height="20" as="geometry">
+            <mxRectangle width="62" height="20" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-121" value="Validations / Constraints" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-118" vertex="1">
+          <mxGeometry x="144" width="236" height="20" as="geometry">
+            <mxRectangle width="236" height="20" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-77" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-72" vertex="1">
+          <mxGeometry y="37" width="380" height="29" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-78" value="username" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-77" vertex="1">
+          <mxGeometry width="82" height="29" as="geometry">
+            <mxRectangle width="82" height="29" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-79" value="string" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-77" vertex="1">
+          <mxGeometry x="82" width="62" height="29" as="geometry">
+            <mxRectangle width="62" height="29" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-80" value="not null, unique, min 4 characters, max 30 characters, isNotEmail" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-77" vertex="1">
+          <mxGeometry x="144" width="236" height="29" as="geometry">
+            <mxRectangle width="236" height="29" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-81" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-72" vertex="1">
+          <mxGeometry y="66" width="380" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-82" value="email" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-81" vertex="1">
+          <mxGeometry width="82" height="33" as="geometry">
+            <mxRectangle width="82" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-83" value="string" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-81" vertex="1">
+          <mxGeometry x="82" width="62" height="33" as="geometry">
+            <mxRectangle width="62" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-84" value="not null, unique, min 3 characters, max 256 characters, isEmail" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-81" vertex="1">
+          <mxGeometry x="144" width="236" height="33" as="geometry">
+            <mxRectangle width="236" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-85" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-72" vertex="1">
+          <mxGeometry y="99" width="380" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-86" value="hashedPassword" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-85" vertex="1">
+          <mxGeometry width="82" height="23" as="geometry">
+            <mxRectangle width="82" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-87" value="binary string" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-85" vertex="1">
+          <mxGeometry x="82" width="62" height="23" as="geometry">
+            <mxRectangle width="62" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-88" value="not null, min and max 60 characters" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-85" vertex="1">
+          <mxGeometry x="144" width="236" height="23" as="geometry">
+            <mxRectangle width="236" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-122" value="Model - Scopes" style="shape=table;startSize=17;container=1;collapsible=0;childLayout=tableLayout;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="xRNBOfDQ-NbFJoLuyLIO-37" vertex="1">
+          <mxGeometry x="340" y="180" width="380" height="172.5" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-123" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-122" vertex="1">
+          <mxGeometry y="17" width="380" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-124" value="Name" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-123" vertex="1">
+          <mxGeometry width="70" height="19" as="geometry">
+            <mxRectangle width="70" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-126" value="Details" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-123" vertex="1">
+          <mxGeometry x="70" width="310" height="19" as="geometry">
+            <mxRectangle width="310" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-127" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-122" vertex="1">
+          <mxGeometry y="36" width="380" height="54" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-128" value="defaultScope" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-127" vertex="1">
+          <mxGeometry width="70" height="54" as="geometry">
+            <mxRectangle width="70" height="54" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-130" value="&lt;div&gt;Used by default when a query is made without specifying a scope.&lt;/div&gt;&lt;b&gt;&amp;nbsp;attributes: {&lt;/b&gt;&lt;div&gt;&lt;b&gt;&amp;nbsp; &amp;nbsp; exclude: [ &#39;hashedPassword&#39;, &#39;email&#39;, &#39;createdAt&#39;, &#39;updatedAt&#39; ]&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&amp;nbsp;}&lt;/b&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;align=left;" parent="xRNBOfDQ-NbFJoLuyLIO-127" vertex="1">
+          <mxGeometry x="70" width="310" height="54" as="geometry">
+            <mxRectangle width="310" height="54" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-131" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-122" vertex="1">
+          <mxGeometry y="90" width="380" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-132" value="currentUser" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-131" vertex="1">
+          <mxGeometry width="70" height="50" as="geometry">
+            <mxRectangle width="70" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-134" value="&lt;div&gt;Returns all fields except the password&lt;/div&gt;&lt;b&gt;&amp;nbsp;attributes: {&lt;/b&gt;&lt;div&gt;&lt;b&gt;&amp;nbsp; &amp;nbsp; exclude: [ &#39;hashedPassword&#39; ]&lt;/b&gt;&lt;/div&gt;&lt;div&gt;&lt;b&gt;&amp;nbsp;}&lt;/b&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;align=left;" parent="xRNBOfDQ-NbFJoLuyLIO-131" vertex="1">
+          <mxGeometry x="70" width="310" height="50" as="geometry">
+            <mxRectangle width="310" height="50" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-135" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-122" vertex="1">
+          <mxGeometry y="140" width="380" height="33" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-136" value="loginUser" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-135" vertex="1">
+          <mxGeometry width="70" height="33" as="geometry">
+            <mxRectangle width="70" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-138" value="Used for queries to verify user login credentials. Returns all fields&lt;div&gt;&lt;b&gt;&amp;nbsp;attributes: {}&lt;/b&gt;&lt;/div&gt;" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;align=left;" parent="xRNBOfDQ-NbFJoLuyLIO-135" vertex="1">
+          <mxGeometry x="70" width="310" height="33" as="geometry">
+            <mxRectangle width="310" height="33" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-97" value="Seed Data" style="shape=table;startSize=20;container=1;collapsible=0;childLayout=tableLayout;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="xRNBOfDQ-NbFJoLuyLIO-37" vertex="1">
+          <mxGeometry x="20" y="253.5" width="310" height="99" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-110" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-97" vertex="1">
+          <mxGeometry y="20" width="310" height="17" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-111" value="email" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-110" vertex="1">
+          <mxGeometry width="80" height="17" as="geometry">
+            <mxRectangle width="80" height="17" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-112" value="username" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-110" vertex="1">
+          <mxGeometry x="80" width="60" height="17" as="geometry">
+            <mxRectangle width="60" height="17" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-113" value="hashedPassword" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-110" vertex="1">
+          <mxGeometry x="140" width="170" height="17" as="geometry">
+            <mxRectangle width="170" height="17" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-98" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-97" vertex="1">
+          <mxGeometry y="37" width="310" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-99" value="demo@user.io" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-98" vertex="1">
+          <mxGeometry width="80" height="20" as="geometry">
+            <mxRectangle width="80" height="20" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-100" value="Demo-lition" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-98" vertex="1">
+          <mxGeometry x="80" width="60" height="20" as="geometry">
+            <mxRectangle width="60" height="20" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-101" value="bcrypt.hashSync(&#39;password&#39;)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-98" vertex="1">
+          <mxGeometry x="140" width="170" height="20" as="geometry">
+            <mxRectangle width="170" height="20" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-102" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-97" vertex="1">
+          <mxGeometry y="57" width="310" height="23" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-103" value="user1@user.io" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-102" vertex="1">
+          <mxGeometry width="80" height="23" as="geometry">
+            <mxRectangle width="80" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-104" value="FakeUser1" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-102" vertex="1">
+          <mxGeometry x="80" width="60" height="23" as="geometry">
+            <mxRectangle width="60" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-105" value="bcrypt.hashSync(&#39;password2&#39;)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-102" vertex="1">
+          <mxGeometry x="140" width="170" height="23" as="geometry">
+            <mxRectangle width="170" height="23" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-106" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-97" vertex="1">
+          <mxGeometry y="80" width="310" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-107" value="user2@user.io" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-106" vertex="1">
+          <mxGeometry width="80" height="19" as="geometry">
+            <mxRectangle width="80" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-108" value="FakeUser2" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-106" vertex="1">
+          <mxGeometry x="80" width="60" height="19" as="geometry">
+            <mxRectangle width="60" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-109" value="bcrypt.hashSync(&#39;password3&#39;)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-106" vertex="1">
+          <mxGeometry x="140" width="170" height="19" as="geometry">
+            <mxRectangle width="170" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-154" value="Model - Methods" style="shape=table;startSize=17;container=1;collapsible=0;childLayout=tableLayout;fillColor=#f5f5f5;fontColor=#333333;strokeColor=#666666;" parent="xRNBOfDQ-NbFJoLuyLIO-37" vertex="1">
+          <mxGeometry x="20" y="370" width="700" height="201.5" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-155" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-154" vertex="1">
+          <mxGeometry y="17" width="700" height="19" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-156" value="Name" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-155" vertex="1">
+          <mxGeometry width="120" height="19" as="geometry">
+            <mxRectangle width="120" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-157" value="Type" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-155" vertex="1">
+          <mxGeometry x="120" width="80" height="19" as="geometry">
+            <mxRectangle width="80" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-158" value="Details" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=#666666;overflow=hidden;fillColor=#f5f5f5;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;fontColor=#333333;" parent="xRNBOfDQ-NbFJoLuyLIO-155" vertex="1">
+          <mxGeometry x="200" width="500" height="19" as="geometry">
+            <mxRectangle width="500" height="19" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-159" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-154" vertex="1">
+          <mxGeometry y="36" width="700" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-160" value="toSafeObject" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-159" vertex="1">
+          <mxGeometry width="120" height="34" as="geometry">
+            <mxRectangle width="120" height="34" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-161" value="Instance" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-159" vertex="1">
+          <mxGeometry x="120" width="80" height="34" as="geometry">
+            <mxRectangle width="80" height="34" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-162" value="Returns an object with only the User instance information that is safe to save to a JWT (like id, username, and email)" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;align=left;" parent="xRNBOfDQ-NbFJoLuyLIO-159" vertex="1">
+          <mxGeometry x="200" width="500" height="34" as="geometry">
+            <mxRectangle width="500" height="34" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-163" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-154" vertex="1">
+          <mxGeometry y="70" width="700" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-164" value="validatePassword" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-163" vertex="1">
+          <mxGeometry width="120" height="30" as="geometry">
+            <mxRectangle width="120" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-165" value="Instance" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-163" vertex="1">
+          <mxGeometry x="120" width="80" height="30" as="geometry">
+            <mxRectangle width="80" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-166" value="Accepts a password string and will return true if there is a match with the User instance&#39;s hashed password. Otherwise, return false. Uses bcryptjs." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;align=left;" parent="xRNBOfDQ-NbFJoLuyLIO-163" vertex="1">
+          <mxGeometry x="200" width="500" height="30" as="geometry">
+            <mxRectangle width="500" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-167" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-154" vertex="1">
+          <mxGeometry y="100" width="700" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-168" value="getCurrentUserById" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-167" vertex="1">
+          <mxGeometry width="120" height="20" as="geometry">
+            <mxRectangle width="120" height="20" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-169" value="Static" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-167" vertex="1">
+          <mxGeometry x="120" width="80" height="20" as="geometry">
+            <mxRectangle width="80" height="20" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-170" value="Accepts an id. Uses the currentUser scope to return a User with the specified id." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;align=left;" parent="xRNBOfDQ-NbFJoLuyLIO-167" vertex="1">
+          <mxGeometry x="200" width="500" height="20" as="geometry">
+            <mxRectangle width="500" height="20" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-171" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-154" vertex="1">
+          <mxGeometry y="120" width="700" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-172" value="login" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-171" vertex="1">
+          <mxGeometry width="120" height="41" as="geometry">
+            <mxRectangle width="120" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-173" value="Static" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-171" vertex="1">
+          <mxGeometry x="120" width="80" height="41" as="geometry">
+            <mxRectangle width="80" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-174" value="Accepts an object with credential and password keys. Seaches for one User with the specified credential (username or email). If a user is found, validates the password by passing it into the instance&#39;s .validatePassword method. If the password is valid, return the user by using the currentUser scope." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;align=left;" parent="xRNBOfDQ-NbFJoLuyLIO-171" vertex="1">
+          <mxGeometry x="200" width="500" height="41" as="geometry">
+            <mxRectangle width="500" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-175" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;strokeColor=inherit;top=0;left=0;bottom=0;right=0;collapsible=0;dropTarget=0;fillColor=none;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;" parent="xRNBOfDQ-NbFJoLuyLIO-154" vertex="1">
+          <mxGeometry y="161" width="700" height="41" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-176" value="signup" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-175" vertex="1">
+          <mxGeometry width="120" height="41" as="geometry">
+            <mxRectangle width="120" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-177" value="Static" style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;" parent="xRNBOfDQ-NbFJoLuyLIO-175" vertex="1">
+          <mxGeometry x="120" width="80" height="41" as="geometry">
+            <mxRectangle width="80" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-178" value="Accepts an object with username, email, and password keys. Hashes the password using bcryptjs hashSync. Creates a User with the username, email, and hashedPassword. Returns the newly created user using the currentUser scope." style="shape=partialRectangle;html=1;whiteSpace=wrap;connectable=0;strokeColor=inherit;overflow=hidden;fillColor=none;top=0;left=0;bottom=0;right=0;pointerEvents=1;fontSize=10;align=left;" parent="xRNBOfDQ-NbFJoLuyLIO-175" vertex="1">
+          <mxGeometry x="200" width="500" height="41" as="geometry">
+            <mxRectangle width="500" height="41" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-151" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Authentication Login Flow&lt;/font&gt;&lt;/h1&gt;&lt;ol&gt;&lt;li&gt;The API login route will be hit with a request body holding a valid&lt;br&gt;credential (either username or email) and password combination.&lt;/li&gt;&lt;br&gt;&lt;li&gt;The API login handler will look for a &lt;code&gt;User&lt;/code&gt; with the input credential in&lt;br&gt;either the &lt;code&gt;username&lt;/code&gt; or &lt;code&gt;email&lt;/code&gt; columns.&lt;/li&gt;&lt;br&gt;&lt;li&gt;Then the &lt;code&gt;hashedPassword&lt;/code&gt; for that found &lt;code&gt;User&lt;/code&gt; will be compared with the input &lt;code&gt;password&lt;/code&gt; for a match.&lt;/li&gt;&lt;br&gt;&lt;li&gt;If there is a match, the API login route should send back a JWT in an&lt;br&gt;HTTP-only cookie and a response body. The JWT and the body will hold the user&#39;s &lt;code&gt;id&lt;/code&gt;, &lt;code&gt;username&lt;/code&gt;, and &lt;code&gt;email&lt;/code&gt;.&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="990" width="410" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-152" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Sign-up Flow&lt;/font&gt;&lt;/h1&gt;&lt;ol&gt;&lt;li&gt;The API signup route will be hit with a request body holding a &lt;code&gt;username&lt;/code&gt;,&amp;nbsp;&lt;code&gt;email&lt;/code&gt;, and &lt;code&gt;password&lt;/code&gt;.&lt;/li&gt;&lt;br&gt;&lt;li&gt;The API signup handler will create a &lt;code&gt;User&lt;/code&gt; with the &lt;code&gt;username&lt;/code&gt;, an &lt;code&gt;email&lt;/code&gt;, and a &lt;code&gt;hashedPassword&lt;/code&gt; created from the input &lt;code&gt;password&lt;/code&gt;.&lt;/li&gt;&lt;br&gt;&lt;li&gt;If the creation is successful, the API signup route should send back a JWT in an HTTP-only cookie and a response body. The JWT and the body will hold the user&#39;s &lt;code&gt;id&lt;/code&gt;, &lt;code&gt;username&lt;/code&gt;, and &lt;code&gt;email&lt;/code&gt;.&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1820" y="1230" width="410" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="xRNBOfDQ-NbFJoLuyLIO-153" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Logout Flow&lt;/font&gt;&lt;/h1&gt;&lt;ol&gt;&lt;li&gt;The API logout route will be hit with a request.&lt;/li&gt;&lt;br&gt;&lt;li&gt;The API logout handler will remove the JWT cookie set by the login or signup API routes and return a JSON success message.&lt;/li&gt;&lt;/ol&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+          <mxGeometry x="1830" y="1430" width="410" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-1" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Frontend Dependencies&lt;/font&gt;&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;js-cookie&lt;/b&gt;&lt;/code&gt; - extracts cookies&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;react-redux&lt;/b&gt;&lt;/code&gt; - React components and hooks for Redux&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;react-router-dom@^5&lt;/b&gt;&lt;/code&gt; - routing for React&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;redux&lt;/b&gt;&lt;/code&gt; - Redux&lt;/li&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;redux-thunk&lt;/b&gt;&lt;/code&gt; - add Redux thunk&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="50" width="410" height="140" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-2" value="&lt;h1 style=&quot;margin-top: 0px;&quot;&gt;&lt;font style=&quot;font-size: 20px;&quot;&gt;Frontend Dev Dependencies&lt;/font&gt;&lt;/h1&gt;&lt;ul&gt;&lt;li&gt;&lt;code&gt;&lt;b&gt;redux-logger&lt;/b&gt;&lt;/code&gt; - log Redux actions in the browser&#39;s dev tools console&lt;br&gt;&lt;/li&gt;&lt;/ul&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="195" width="380" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-3" value="/frontend" style="swimlane;whiteSpace=wrap;html=1;startSize=23;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;verticalAlign=top;" vertex="1" parent="1">
+          <mxGeometry x="40" y="2380" width="2510" height="1710" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-176" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-3" source="h0ON9-zBAFF4LZqiPs6g-141" target="h0ON9-zBAFF4LZqiPs6g-151">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-141" value="index.css" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-3">
+          <mxGeometry x="10" y="220" width="170" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-168" value="This CSS file provides site-wide styling.&lt;div&gt;Automatically generated by &#39;create-react-app&#39;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-141">
+          <mxGeometry x="10" y="30" width="150" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-143" value="/public" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-3">
+          <mxGeometry x="1210" y="40" width="310" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-140" value="index.html" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-143">
+          <mxGeometry x="11.25" y="30" width="285" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-167" value="Entry HTML page that is serves as a framework for React components to place elements defined by their corresponding JSX onto the DOM. Includes only the basic configuration with DOCTYPE, html language, title, and links. The body simply contains a div with id of root, which is assigned within the JSX to be the top level DOM node into which components will render.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;This file and it&#39;s contents are automatically generated by &#39;create-react-app&#39;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-140">
+          <mxGeometry x="10" y="30" width="260" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-174" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-3" source="h0ON9-zBAFF4LZqiPs6g-144" target="h0ON9-zBAFF4LZqiPs6g-170">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-144" value="app.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-3">
+          <mxGeometry x="720" y="40" width="410" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-173" value="Main application React functional component.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Provides the top level structure for various page / DOM elements that define the layout and functionality of the page.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Provides routing in the single-page appliaction to selectively render functional components depending upon the URL endpoint (switch / route).&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Allows the user sesison to persist through refreshes by dispatching the restoreUser thunk action from the Redux store (reducer). This fetches the session information from the JWT cookie, then sets the returned / parsed values onto the store. This is accomplished through a useEffect hook invocation that runs upon page load. Content is rendered only after the dispatch is complete and the loaded flag is set to true.&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-144">
+          <mxGeometry x="15" y="30" width="395" height="210" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-151" value="index.js / index_non-modal.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-3">
+          <mxGeometry x="230" y="40" width="400" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-170" value="Top level entry script.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Defines the Root level functional component that is directly associated / rendered into the HTML div with id of root.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Imports the Redux store configuration and invokes the configureStore method.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;If not in the production environment -&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;- Calls the restoreCSRF method to get the XSRF-TOKEN &lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;to the frontend (note that this is not required in production as the XSRF-TOKEN is attatched when statically serving the index.html file)&lt;/span&gt;&lt;/div&gt;&lt;div&gt;- Attaches the custom csrfFetch function onto the window&lt;/div&gt;&lt;div&gt;- Sets the store onto the window for debugging purposes&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Wraps the App functional component in Redux&#39;s Provider and ReactRouter DOM&#39;s BrowserRouter provider components. This provides both the Redux store and React&#39;s context(s) to lower level components defined by the App.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;non-modal version does NOT include / wrap the app with the React context provider as React context is not required when the login page is non-modal&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-151">
+          <mxGeometry x="2.5" y="30" width="395" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-153" value="package.json" style="swimlane;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-3">
+          <mxGeometry x="10" y="40" width="170" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-154" value="Defines dependencies / installations used by npm.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Includes scripts for starting on a per-environment basis:&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Provides proxy definition for the development environment&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-153">
+          <mxGeometry x="7.5" y="30" width="155" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-156" value="/src" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-3">
+          <mxGeometry x="20" y="500" width="2470" height="1190" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-112" value="/components" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-156">
+          <mxGeometry x="20" y="40" width="1480" height="940" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-157" value="LoginFormModal / LoginFormPage" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-112">
+          <mxGeometry x="10" y="40" width="650" height="470" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-235" value="LoginForm.js / index.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-157">
+          <mxGeometry x="10" y="32.5" width="630" height="317.5" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-236" value="Login form functional component&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Renders controlled elements for the user to provide a credential and their password, as well as the submit button.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Upon submit, dispatches the login thunk action. If errors are returned in the response, catches the errors returned from the promise and conditionally renders them in an unordered list to indicate the problem(s) to the user.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;/LoginForm - Modal&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;white-space: pre;&quot;&gt;&#x9;&lt;/span&gt;index.js - contains the function component to render the&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp;login button&amp;nbsp;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; and conditionally render the modal login form&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; LoginForm.js - contains the function component containing the login&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; form container and elements&lt;/span&gt;&lt;/div&gt;&lt;div&gt;/LoginFormPage - Non-Modal&lt;/div&gt;&lt;div&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; index.js -&amp;nbsp;&lt;span style=&quot;background-color: initial;&quot;&gt;contains the function component containing the login&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp;form container and elements&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;In the non-modal version:&amp;nbsp;&lt;/div&gt;&lt;div&gt;- Subscribed to the Redux session store&lt;/div&gt;&lt;div&gt;- If a session user exists on the store, redirect the browser to the &#39;/&#39; route.&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-235">
+          <mxGeometry x="10" y="25" width="610" height="285" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-241" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=0;fillColor=#0050ef;strokeColor=#001DBC;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-157" source="h0ON9-zBAFF4LZqiPs6g-237" target="h0ON9-zBAFF4LZqiPs6g-235">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-237" value="index.css" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-157">
+          <mxGeometry x="190" y="380" width="270" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-238" value="This CSS file provides styling for the login form elements" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-237">
+          <mxGeometry x="5.75" y="30" width="258.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-158" value="Navigation" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-112">
+          <mxGeometry x="690" y="40" width="750" height="250" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-224" value="index.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-158">
+          <mxGeometry x="10" y="32.5" width="420" height="197.5" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-225" value="React functional component responsible for defining the navigation header.&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Subscribed to the Redux session store.&lt;/div&gt;&lt;div&gt;Conditionally renders the profile button or login (button for modal, link for non-modal) / signup / logout (non-modal) links depending upon whether there is a session user on the Redux Store.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Conditionally loads the session links portion of the JSX based upon the value of the isLoaded prop which is passed from app.js (true once restoreUser fetch call response is returned)&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-224">
+          <mxGeometry x="3.5" y="25" width="395" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-231" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-158" source="h0ON9-zBAFF4LZqiPs6g-226" target="h0ON9-zBAFF4LZqiPs6g-224">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="195" />
+              <mxPoint x="460" y="131" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-226" value="index.css" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-158">
+          <mxGeometry x="470" y="160" width="270" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-227" value="This CSS file provides styling for the Navigation bar elements" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-226">
+          <mxGeometry x="5.75" y="30" width="258.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-232" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-158" source="h0ON9-zBAFF4LZqiPs6g-229" target="h0ON9-zBAFF4LZqiPs6g-224">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="460" y="86" />
+              <mxPoint x="460" y="131" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-229" value="ProfileButton.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-158">
+          <mxGeometry x="470" y="32.5" width="270" height="107.5" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-230" value="React functional component responsible for rendering the profile button image from Font Awesome and the drop down menu containing user info and the logout button.&amp;nbsp;&lt;div&gt;Receives the session user as a prop.&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-229">
+          <mxGeometry x="10" y="25" width="250" height="75" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-165" value="SignupFormPage" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-112">
+          <mxGeometry x="10" y="530" width="650" height="390" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-244" value="index.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-165">
+          <mxGeometry x="10" y="30" width="630" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-245" value="Signup form functional component&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Subscribed to the Redux session store.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Renders controlled elements for the user to provide a username, email, password, and password confirmation, as well as the submit button.&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;If a session user exists on the store, redirect the browser to the &#39;/&#39; route.&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Upon submit:&lt;/div&gt;&lt;div&gt;- Performs verification that password and confirm password values are the same. Sets an error to the error array if this check is failed&lt;/div&gt;&lt;div&gt;- Dispatches the signup thunk action. If errors are returned in the response, catches the errors returned from the promise and conditionally renders them in an unordered list to indicate the problem(s) to the user.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-244">
+          <mxGeometry x="10" y="25" width="610" height="215" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-247" value="index.css" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-165">
+          <mxGeometry x="190" y="300" width="270" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-248" value="This CSS file provides styling for the login form elements" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-247">
+          <mxGeometry x="5.75" y="30" width="258.5" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-246" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=0;fillColor=#0050ef;strokeColor=#001DBC;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-165" source="h0ON9-zBAFF4LZqiPs6g-247" target="h0ON9-zBAFF4LZqiPs6g-244">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-243" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-112" source="h0ON9-zBAFF4LZqiPs6g-235" target="h0ON9-zBAFF4LZqiPs6g-224">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-253" value="Non-Modal version only" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;fontSize=10;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-112">
+          <mxGeometry x="720" y="420" width="110" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-135" value="/store" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-156">
+          <mxGeometry x="1540" y="40" width="910" height="710" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-178" value="index.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-135">
+          <mxGeometry x="10" y="30" width="420" height="190" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-179" value="Responsible for configuring and creating the Redux store.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Creates and defines the root reducer function. combineReducers is used to incorporate all reducers into the single root reducer as only 1 reducer is allowed to be passed to Redux.&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Initializes the enhancer variable that is set to different store enhancers depending upon the Node environment (dev, prod, etc). This attaches the Redux thunk middleware, but includes the compose enchancer and the logger when in the development environment.&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-178">
+          <mxGeometry x="3.5" y="25" width="395" height="155" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-180" value="csrf.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-135">
+          <mxGeometry x="10" y="250" width="420" height="360" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-181" value="Contains custom function to wrap fetch requests to the backend that will be used in place of the default fetch method. This is due to the Express backend server being configured to be CSRF protected and as such will only accept requests that have the right CSRF token value in a cookie.&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Contains thunk action creator csrfFetch:&lt;/div&gt;&lt;div&gt;- Determines request method and defaults to &#39;GET&#39; if a method is not defined&lt;/div&gt;&lt;div&gt;- Sets the fetch header options to and empty object if no headers are defined&lt;/div&gt;&lt;div&gt;- If the method is not &#39;GET&#39;, applies the XSRF-TOKEN cookie to the fetch header options&lt;/div&gt;&lt;div&gt;- Performs an async fetch call to the passed-in URL using the provided options&amp;nbsp; with the applied XSRF-TOKEN cookie&lt;/div&gt;&lt;div&gt;- Handles errors / returns fetch response&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Contains restoreCSRF method for development:&lt;/div&gt;&lt;div&gt;- Invokes csrfFetch to the /api/csrf/restore backend route to restore the csrf cookies&lt;/div&gt;&lt;div&gt;- NOTE: This is not required in the production environment because the csrf cookies are attached to the response when statically serving the index.html file.&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-180">
+          <mxGeometry x="3.5" y="25" width="406.5" height="325" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-186" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-135" source="h0ON9-zBAFF4LZqiPs6g-183" target="h0ON9-zBAFF4LZqiPs6g-178">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-183" value="session.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-135">
+          <mxGeometry x="480" y="30" width="420" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-184" value="Responsible for user session interaction and interaction with the Redux store to provide user session information to the appliaction.&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Contains asynchronous thunk action creators that interact with backend routes:&lt;/div&gt;&lt;div&gt;- Login&amp;nbsp;&lt;/div&gt;&lt;div&gt;- Signup&lt;/div&gt;&lt;div&gt;- Logout&lt;/div&gt;&lt;div&gt;- Restore User (fetches session info from backend and dispatches setUser)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Contains action creators to interact with the reducer:&lt;/div&gt;&lt;div&gt;- setUser (sets user session info to the store upon successful login)&lt;/div&gt;&lt;div&gt;- removeUser (removes user session info from the store upon logout)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Contains the session reducer for setting data into the new state and passing it to the Redux Store.&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-183">
+          <mxGeometry x="3.5" y="25" width="406.5" height="245" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-194" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;GET /api/csrf/restore&lt;/span&gt;&lt;div&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;Any endpoint passed into the URL parameter&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-135">
+          <mxGeometry x="115" y="660" width="210" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-213" value="" style="endArrow=doubleBlock;startArrow=doubleBlock;html=1;rounded=1;dashed=1;fillColor=#a20025;strokeColor=#6F0000;curved=0;startFill=1;endFill=1;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-135">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="690" y="360" as="sourcePoint" />
+            <mxPoint x="690" y="300" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="690" y="330" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-214" value="&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 10px; background-color: initial;&quot;&gt;GET POST DELETE /api/session&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;&quot;&gt;&lt;span style=&quot;font-size: 10px;&quot;&gt;POST /api/users&lt;/span&gt;&lt;br&gt;&lt;/div&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-135">
+          <mxGeometry x="610" y="360" width="160" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-192" value="" style="endArrow=doubleBlock;startArrow=doubleBlock;html=1;rounded=1;dashed=1;fillColor=#a20025;strokeColor=#6F0000;curved=0;startFill=1;endFill=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-135" source="h0ON9-zBAFF4LZqiPs6g-194">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="220" y="660" as="sourcePoint" />
+            <mxPoint x="220" y="610" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="220" y="650" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-234" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=-0.004;entryY=0.731;entryDx=0;entryDy=0;entryPerimeter=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-135" source="h0ON9-zBAFF4LZqiPs6g-180" target="h0ON9-zBAFF4LZqiPs6g-184">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-134" value="/context" style="swimlane;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-156">
+          <mxGeometry x="1540" y="800" width="780" height="370" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-221" value="Modal.js" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-134">
+          <mxGeometry x="10" y="30" width="420" height="330" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-222" value="Frames modal elements using the React createPortal method.&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Creates a React context to be used for the modal -&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;A state variable value for the context provider gets set to a React ref that gets created (and is subsequently assigned to Provider&#39;s sibling &amp;lt;div&amp;gt;).&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;The context is referenced by the portal created by the modal function component as the DOM node upon which the modal should go.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Includes the React context provider function component that is used to wrap React elements in the entry index.js Root() component. A React ref is created that is assigned to the context provider&#39;s sibling &amp;lt;div&amp;gt;. the ref then stores a reference to this &amp;lt;div&amp;gt; as it&#39;s &#39;current&#39; value.&amp;nbsp;&lt;/span&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;This is the location that will be referenced as the DOM node where the React portal will &#39;physically&#39; put the JSX passed into it for rendering.&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;background-color: initial;&quot;&gt;Contains functional component for the modal element that uses the createPortal method to allow for the rendering of some children into a different part of the DOM. Uses the React context to determine which DOM node to render into. Additionally handles closing the modal with an onClick event handler.&lt;/span&gt;&lt;/div&gt;" style="text;html=1;align=left;verticalAlign=top;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-221">
+          <mxGeometry x="3.5" y="25" width="406.5" height="305" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-223" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-134" source="h0ON9-zBAFF4LZqiPs6g-219" target="h0ON9-zBAFF4LZqiPs6g-221">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-219" value="index.css" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-134">
+          <mxGeometry x="500" y="30" width="270" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-220" value="This CSS file provides styling for the modal elements. It handles modal size and positioning, as well as background color." style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="h0ON9-zBAFF4LZqiPs6g-219">
+          <mxGeometry x="5.75" y="25" width="258.5" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-251" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fillColor=#60a917;strokeColor=#2D7600;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-156" source="h0ON9-zBAFF4LZqiPs6g-224" target="h0ON9-zBAFF4LZqiPs6g-184">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="780" />
+              <mxPoint x="2125" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-252" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=1;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fillColor=#60a917;strokeColor=#2D7600;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-156" source="h0ON9-zBAFF4LZqiPs6g-235" target="h0ON9-zBAFF4LZqiPs6g-184">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1428.5714285714287" y="640" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="513" y="480" />
+              <mxPoint x="930" y="480" />
+              <mxPoint x="930" y="780" />
+              <mxPoint x="2125" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-256" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.25;entryY=1;entryDx=0;entryDy=0;fillColor=#60a917;strokeColor=#2D7600;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-156" source="h0ON9-zBAFF4LZqiPs6g-244" target="h0ON9-zBAFF4LZqiPs6g-184">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="720" />
+              <mxPoint x="930" y="780" />
+              <mxPoint x="2125" y="780" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-188" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.25;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;curved=0;fillColor=#0050ef;strokeColor=#001DBC;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-3" source="h0ON9-zBAFF4LZqiPs6g-183" target="h0ON9-zBAFF4LZqiPs6g-151">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2145" y="460" />
+              <mxPoint x="430" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-189" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.75;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-3" source="h0ON9-zBAFF4LZqiPs6g-183" target="h0ON9-zBAFF4LZqiPs6g-144">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="2355" y="390" />
+              <mxPoint x="925" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-233" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-3" source="h0ON9-zBAFF4LZqiPs6g-158" target="h0ON9-zBAFF4LZqiPs6g-144">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1105" y="390" />
+              <mxPoint x="925" y="390" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-240" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;fillColor=#0050ef;strokeColor=#001DBC;curved=0;" edge="1" parent="h0ON9-zBAFF4LZqiPs6g-3" source="h0ON9-zBAFF4LZqiPs6g-134" target="h0ON9-zBAFF4LZqiPs6g-151">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1540" y="1485" />
+              <mxPoint x="1540" y="460" />
+              <mxPoint x="430" y="460" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-136" value="HTML file" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#ffcd28;strokeColor=#d79b00;gradientColor=#ffa500;" vertex="1" parent="1">
+          <mxGeometry x="2000" y="155" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-137" value="CSS file" style="swimlane;whiteSpace=wrap;html=1;align=center;fillColor=#dae8fc;strokeColor=#6c8ebf;gradientColor=#7ea6e0;" vertex="1" parent="1">
+          <mxGeometry x="2000" y="205" width="170" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-198" value="" style="endArrow=doubleBlock;startArrow=doubleBlock;html=1;rounded=1;dashed=1;fillColor=#a20025;strokeColor=#6F0000;curved=0;startFill=1;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2240" y="200" as="sourcePoint" />
+            <mxPoint x="2310" y="200" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-199" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;Fetch Call or Frontend / Backend interaction&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2320" y="190" width="210" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-201" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;require(&#39;&#39;) / import / reference&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2320" y="60" width="210" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-202" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#0050ef;strokeColor=#001DBC;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2240" y="69.82" as="sourcePoint" />
+            <mxPoint x="2310" y="69.82" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-203" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;Shell command&amp;nbsp;&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2320" y="85" width="210" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-204" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#0050ef;strokeColor=#000000;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2240" y="94.82" as="sourcePoint" />
+            <mxPoint x="2310" y="94.82" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-205" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;Environment Configuration&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2320" y="110" width="210" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-206" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#e1d5e7;strokeColor=#9673a6;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2240" y="119.82" as="sourcePoint" />
+            <mxPoint x="2310" y="119.82" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-207" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;Database Interaction / dependency / command&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2320" y="135" width="210" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-208" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2240" y="144.82" as="sourcePoint" />
+            <mxPoint x="2310" y="144.82" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-210" value="" style="endArrow=none;html=1;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2240" y="170" as="sourcePoint" />
+            <mxPoint x="2310" y="170" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-211" value="" style="endArrow=none;html=1;rounded=0;fillColor=#fff2cc;strokeColor=#d6b656;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2240" y="174.87" as="sourcePoint" />
+            <mxPoint x="2310" y="174.87" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-212" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;Database Definition&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2320" y="165" width="210" height="15" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-216" value="" style="endArrow=doubleBlock;startArrow=doubleBlock;html=1;rounded=1;dashed=1;fillColor=#a20025;strokeColor=#6F0000;curved=0;startFill=1;endFill=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="1" target="xRNBOfDQ-NbFJoLuyLIO-296">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="650" y="1800" as="sourcePoint" />
+            <mxPoint x="750" y="1560" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="680" y="1800" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-249" value="&lt;span style=&quot;font-size: 10px;&quot;&gt;Redux Store Subscription&lt;/span&gt;" style="text;html=1;align=left;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="2320" y="215" width="210" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="h0ON9-zBAFF4LZqiPs6g-250" value="" style="endArrow=classic;html=1;rounded=0;fillColor=#60a917;strokeColor=#2D7600;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="2240" y="224.82" as="sourcePoint" />
+            <mxPoint x="2310" y="224.82" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
