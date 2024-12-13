@@ -1,2 +1,2 @@
 # authenticate-me-react-redux
-User Authentication Backend / Frontend using React &amp; Redux
+Full Stack User Authentication project using React &amp; Redux
