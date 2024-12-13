@@ -1,2 +1,2 @@
 # authenticate-me-react-redux
-Full Stack User Authentication project using React &amp; Redux
+Full Stack user authentication project using React &amp; Redux
