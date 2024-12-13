@@ -1,5 +1,5 @@
 # authenticate-me-react-redux
-User Authentication Backend / Frontend using React &amp; Redux
+User authentication full stack application using React &amp; Redux
 
 This repositiory is a standalone repo to provide easier visibility to the project which can be found under AA.App-Academy-Coursework.
 
